@@ -5,7 +5,7 @@ Introducing R in JavaScript, a way to insert R code directly into HTML documents
 You can use it in 2 easy steps.
 
 ## Step 1
-Add `<script src='r.js'></script>` anywhere in your HTML file.
+Add `<script src='https://cdn.jsdelivr.net/gh/kdpsingh/rjs/r.js'></script>` anywhere in your HTML file (or download r.js locally).
 
 ## Step 2
 Add `class = "r-code"` to any HTML element.

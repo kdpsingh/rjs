@@ -1,0 +1,13 @@
+# rjs: R in JavaScript
+
+Introducing R in JavaScript, a way to insert R code directly into HTML documents, powered by OpenCPU.
+
+You can use it in 2 easy steps.
+
+## Step 1
+Add `<script src='r.js'></script>` anywhere in your HTML file.
+
+## Step 2
+Add `class = "r-code"` to any HTML element.
+
+That's it.

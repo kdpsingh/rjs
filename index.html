@@ -1,0 +1,40 @@
+<html>
+<head><title>R in JavaScript is here!</title>
+<script src='r.js'></script></head>
+<body>
+<h2>Plain R code</h2>
+<div class = 'r-code'>
+1+1
+</div>
+<hr>
+<h2>R Markdown with a HTML output format</h2>
+<div class = 'r-code'>
+# This is pretty:
+
+  - cool!
+  - fun!
+  - fast!
+
+```{r echo=FALSE, message=FALSE}
+library(ggplot2)
+
+ggplot(mtcars, aes(x=as.factor(cyl), y=mpg)) +
+  geom_boxplot() +
+  labs(x = 'Cylinders', y = 'Miles per Gallon')
+```
+</div>
+<hr>
+<h2>R Markdown with a non-html output format</h2>
+<div class = 'r-code'>
+---
+output: pdf_document
+---
+
+# mtcars dataset
+
+```{r echo=FALSE}
+str(mtcars)
+```
+</div>
+</body>
+</html>

@@ -28,6 +28,7 @@ rjs = function () {
           xhttp_followup_request.open('GET', output_url, true);
           xhttp_followup_request.send();
         } else {
+          console.log(this.status);
           code_block.innerHTML = this.responseText.replace('\n\nIn call:\nparse(text = x, srcfile = src)', '').replace(/\n/g, '<br>');
         }
         code_block.classList.remove("r-code");

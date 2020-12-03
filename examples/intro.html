@@ -1,13 +1,13 @@
 <html>
 <head><title>R in JavaScript is here!</title>
-<script src='r.js'></script></head>
+<script src='https://cdn.jsdelivr.net/gh/kdpsingh/rjs/r.js'></script></head>
 <body>
 <h2>Plain R code</h2>
 <div class = 'r-code'>
 1+1
 </div>
 <hr>
-<h2>R Markdown with a HTML output format</h2>
+<h2>R Markdown with html output format</h2>
 <div class = 'r-code'>
 # This is pretty:
 
@@ -24,7 +24,7 @@ ggplot(mtcars, aes(x=as.factor(cyl), y=mpg)) +
 ```
 </div>
 <hr>
-<h2>R Markdown with a non-html output format</h2>
+<h2>R Markdown with pdf document format</h2>
 <div class = 'r-code'>
 ---
 output: pdf_document

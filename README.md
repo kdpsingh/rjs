@@ -19,8 +19,12 @@ After `rjs` runs, the `class` will be changed to `"r-code-output"`. You can run 
 - Handle special characters in the input
 - Render to non-html formats such as pdf_document (`rjs` automatically provides a link to the file)
 
-## Take a look at the examples in the `examples` folder:
+## For ideas on how to get started, take a look in the `examples` folder:
 
 ### intro.html
 
 ![Screenshot of intro.html](examples/intro.png)
+
+### scholar.html
+
+![Screenshot of scholar.html](examples/scholar.png)

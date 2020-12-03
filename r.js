@@ -35,9 +35,9 @@ rjs = function () {
         code_block.classList.add("r-code-output");
       }
     };
-        
+    
     xhttp_initial_request.open('POST', 'http://kdpsingh.ocpu.io/RendereR/R/renderer', true);
-    xhttp_initial_request.setRequestHeader('Content-Type', 'application/json');
+    xhttp_initial_request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8"');
     xhttp_initial_request.send(JSON.stringify({"text": encodeURIComponent(code_block.innerHTML)}));
   });
 }

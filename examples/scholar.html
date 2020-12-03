@@ -1,0 +1,28 @@
+<html>
+<head><title>R in JavaScript is here!</title>
+<script src='https://cdn.jsdelivr.net/gh/kdpsingh/rjs/r.js'></script></head>
+<body>
+<div class='r-code'>
+---
+title: My publications
+---
+```{r echo=FALSE, message = FALSE, warning=FALSE}
+library(dplyr)
+library(stringr)
+library(scholar)
+
+google_scholar_id = '_0OsweUAAAAJ'
+
+my_pubs = get_publications(google_scholar_id,flush=TRUE) %>% arrange(desc(year))
+
+my_pubs %>%
+  mutate(author = str_replace(author,'K Singh','**K Singh**')) %>% 
+  mutate(Publications = str_c(author, '. ', title, '. <i>', journal, '</i>. ', number, ', ', year, '.</a>')) %>% 
+  select(Publications) %>% 
+  dplyr::filter(!is.na(Publications)) %>%
+  knitr::kable()
+  
+```
+</div>
+</body>
+</html>

@@ -6,7 +6,9 @@
 ---
 title: My publications
 ---
+
 ```{r echo=FALSE, message = FALSE, warning=FALSE}
+
 library(dplyr)
 library(stringr)
 library(scholar)
@@ -17,11 +19,11 @@ my_pubs = get_publications(google_scholar_id,flush=TRUE) %>% arrange(desc(year))
 
 my_pubs %>%
   mutate(author = str_replace(author,'K Singh','**K Singh**')) %>% 
-  mutate(Publications = str_c(author, '. ', title, '. <i>', journal, '</i>. ', number, ', ', year, '.</a>')) %>% 
-  select(Publications) %>% 
-  dplyr::filter(!is.na(Publications)) %>%
-  knitr::kable()
-  
+  mutate(link = str_c('<a target="_blank" href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=', google_scholar_id, '&citation_for_view=_0OsweUAAAAJ:', pubid, '">', author, '. ', title, '. <i>', journal, '</i>. ', number, ', ', year, '.</a>')) %>% 
+  select(link) %>% 
+  filter(!is.na(link)) %>%  
+  knitr::kable(col.names = NULL)
+
 ```
 </div>
 </body>

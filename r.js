@@ -23,7 +23,7 @@ rjs = function () {
               
               // Detect if this has an output specified that is NOT html_document or html_notebook.
               // If so, provide a link to the output file
-              if (/^\s*?---[\s\S]+?output:[\s\S]+?---/.test(code_block.innerHTML) && !(/^\s*?---[\s\S]+?output:\s+?html_(document|notebook)[\s\S]+?---/.test(code_block.innerHTML))) {
+              if (/^\s*?---[\s\S]+?output:[\s\S]+?---/.test(code_text) && !(/^\s*?---[\s\S]+?output:\s+?html_(document|notebook)[\s\S]+?---/.test(code_text))) {
                 code_block.innerHTML = '<a href="' + output_url +'" target="_blank">Click here to view file</a>';
               } else {
                 code_block.innerHTML = this.responseText; 
